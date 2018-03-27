@@ -15,8 +15,11 @@ tic;
 %%%%%%LOADS PARAMETERS%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 EnKFScriptParameters                                                       %Loads Parameters for Assimilation
 %%%%%%PERFORMS ENKF%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-[vamean,Truth]=EnKF(Data,Truth,vp,Tmax,vpmean,vamean,H,N,Datdim,Statedim,...
-    Sigma,Gamma,odefun,LSize);                                             %Performs EnKF
+%[vamean,Truth,Caabs]=EnKF(Data,Truth,vp,Tmax,vpmean,vamean,H,N,Datdim,...
+%Statedim,Sigma,Gamma,odefun,LSize);                                        %Performs EnKF
+[vamean,Truth,Caabs]=SREnKF(Data,Truth,vp,Tmax,vpmean,vamean,H,N,Datdim,...
+Statedim,Sigma,Gamma,odefun,LSize);                                        %Performs SREnKF
+
 %%%%%%Generates PLOTS%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 PlotCreate                                                                 %Plot Create
 toc;
