@@ -11,6 +11,9 @@ dydt.m                  - The function for the RHS of the ODE system            
 
 EnKF.m                  - The function which performs the EnKF
 
+SREnKF.m                - The function which performs the SREnKF
+
+
 EnKFScriptParameters.m  - The script which contains parameters associated 				   with the data assimilation
 
 linkstructure.m         - The script which contains a connectivity matrix 				   for the tree stucture (and link size)
